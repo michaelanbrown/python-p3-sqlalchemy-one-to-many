@@ -18,3 +18,4 @@ class Game(Base):
     title = Column(String())
     genre = Column(String())
     platform = Column(String())
+    price = Column(Integer())
