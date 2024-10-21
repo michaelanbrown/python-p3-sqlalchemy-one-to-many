@@ -29,6 +29,11 @@ class Game(Base):
 class Review(Base):
     __tablename__ = 'reviews'
 
+    def __repr__(self):
+        return f'Review(id={self.id}, ' + \
+            f'score={self.score}, ' + \
+            f'game_id={self.game_id})'
+
     id = Column(Integer(), primary_key=True)
     score = Column(Integer())
     comment = Column(String())
