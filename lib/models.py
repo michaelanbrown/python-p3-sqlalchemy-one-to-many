@@ -14,6 +14,11 @@ Base = declarative_base(metadata=metadata)
 class Game(Base):
     __tablename__ = 'games'
 
+    def __repr__(self):
+        return f'Game(id={self.id}, ' + \
+            f'title={self.title}, ' + \
+            f'platform={self.platform})'
+
     id = Column(Integer(), primary_key=True)
     title = Column(String())
     genre = Column(String())
